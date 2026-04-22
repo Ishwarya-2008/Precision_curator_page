@@ -114,5 +114,6 @@ loadMoreBtn.addEventListener('click', () => {
     loadCount++;
     loadMoreBtn.disabled = false;
     loadMoreBtn.innerHTML = 'Load More';
+    loadMoreBtn.scrollIntoView({ behavior: 'smooth', block: 'end' });
     }, 1000);
 });
