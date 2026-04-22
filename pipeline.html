@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Pipeline</title>
+    <link rel="stylesheet" href="pipeline.css">
+    <script src="https://kit.fontawesome.com/d7df01ffeb.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <section class="left-sec">
+            <div class="header">
+                <div class="title">
+                    <h1 class="precision">Precision</h1>
+                    <p>Curator v1.0</p>
+                </div>
+                <div class="lists">
+                    <div>
+                        <svg>
+                            <rect x="3" y="3" width="8" height="8" rx="2" />
+                            <rect x="13" y="3" width="8" height="5" rx="2" />
+                            <rect x="13" y="10" width="8" height="11" rx="2" />
+                            <rect x="3" y="13" width="8" height="8" rx="2" />
+                        </svg>
+                        <p><a href="index.html">Dashboard</a></p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-user-group"></i>
+                        <p>Contacts</p>
+                    </div>
+                    <div class="active">
+                        <i class="fa-solid fa-chart-area"></i>
+                        <p>Pipeline</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <p>Analytics</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="rec-btn">
+                    <p>New Record</p>
+                </div>
+                <div class="help">
+                    <div>
+                        <i class="fa-regular fa-circle-question"></i>
+                        <p>Help</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <p>Log out</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="right-sec">
+            <div class="head">
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search pipeline..." oninput="searchByName()">
+                </div>
+                <div class="profile">
+                    <i class="fa-regular fa-bell"></i>
+                    <i class="fa-solid fa-gear"></i>
+                    <img src="images/per1.jpg" alt="profile-pic" class="profile-pic">
+                </div>
+            </div>
+            <div class="pipeline">
+                <div class="sales">
+                    <h3>Sales Pipeline</h3>
+                    <div class="activity">
+                        <p>Managing 24 active deals valued at $1.2M</p>
+                        <div class="btns">
+                            <div class="filter-btn">
+                                <i class="fa-solid fa-filter"></i>
+                                <p>Filter</p>
+                            </div>
+                            <div class="sort-btn" id="sort-btn">
+                                <div class="icons">
+                                    <i class="fa-solid fa-sort-up"></i>
+                                    <i class="fa-solid fa-sort-down"></i>
+                                </div>
+                                <p>Sort By Value</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="deals"></div>
+            </div>
+            <div class="right-bottom">
+                <div class="health">
+                    <div class="forecast">
+                        <p>WEIGHTED FORECAST</p>
+                        <span>$842,500</span>
+                        <div class="outer">
+                            <div class="inner"></div>
+                        </div>
+                    </div>
+                    <div class="probablity">
+                        <p>WIN PROBABILITY</p>
+                        <span>64%</span>
+                        <p class="revenue"><i class="fa-solid fa-arrow-trend-up"></i> +5% from last month</p>
+                    </div>
+                    <div class="avg">
+                        <p>AVG. DEAL CYCLE</p>
+                        <span>42 DAYS</span>
+                        <p>Target: 35 Days</p>
+                    </div>
+                    <div class="optional">
+                        <div class="text">
+                            <p>PIPELINE HEALTH</p>
+                            <h2>Optimal</h2>
+                        </div>
+                        <div class="text-logo"><i class="fa-solid fa-shield-heart"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="pipeline.js"></script>
+</body>
+
+</html>
+

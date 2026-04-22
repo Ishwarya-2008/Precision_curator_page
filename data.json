@@ -1,0 +1,209 @@
+{
+    "stages": [
+        {
+            "id": "prospecting",
+            "label": "PROSPECTING",
+            "count": 4,
+            "colClass": "pros-col",
+            "dotClass": "pros"
+        },
+        {
+            "id": "qualification",
+            "label": "QUALIFICATION",
+            "count": 3,
+            "colClass": "qual-col",
+            "dotClass": "qual"
+        },
+        {
+            "id": "proposal",
+            "label": "PROPOSAL",
+            "count": 5,
+            "colClass": "pro-col",
+            "dotClass": "pro"
+        },
+        {
+            "id": "negotiation",
+            "label": "NEGOTIATION",
+            "count": 2,
+            "colClass": "nego-col",
+            "dotClass": "nego"
+        },
+        {
+            "id": "closed",
+            "label": "CLOSED",
+            "count": 10,
+            "colClass": "close-col",
+            "dotClass": "close"
+        }
+    ],
+    "data": [
+        {
+            "company": "TECH CORE",
+            "project": "Enterprise Cloud Migration",
+            "valueLabel": "Value",
+            "value": "$45,000",
+            "img": "images/per2.jpg",
+            "status": "prospecting",
+            "cardClass": "tech"
+        },
+        {
+            "company": "GROWTH LAB",
+            "project": "Data Analytics Suite",
+            "valueLabel": "Value",
+            "value": "$12,800",
+            "img": "images/per3.jpg",
+            "status": "prospecting",
+            "cardClass": "lab"
+        },
+        {
+            "company": "NEXUS CORP",
+            "project": "Infrastructure Overhaul v2",
+            "valueLabel": "Value",
+            "value": "$185,000",
+            "img": "images/per4.jpg",
+            "status": "qualification",
+            "cardClass": "qual-tech"
+        },
+        {
+            "company": "BLUE SKY INC",
+            "project": "Mobile App Dev Phase 1",
+            "valueLabel": "Value",
+            "value": "$62,000",
+            "img": "images/per5.jpg",
+            "status": "proposal",
+            "cardClass": "tech"
+        },
+        {
+            "company": "GLOBAL LOGISTICS",
+            "project": "Supply Chain AI Integration",
+            "valueLabel": "Value",
+            "value": "$310,000",
+            "img": "images/per6.jpg",
+            "status": "proposal",
+            "cardClass": "lab",
+            "highValue": true
+        },
+        {
+            "company": "AETHERIA",
+            "project": "Sustainability Consulting",
+            "valueLabel": "Value",
+            "value": "$28,500",
+            "img": "images/per7.jpg",
+            "status": "negotiation",
+            "cardClass": "nego-tech"
+        },
+        {
+            "company": "WON",
+            "project": "Annual License Renewal",
+            "valueLabel": "Final Value",
+            "value": "$15,000",
+            "img": "images/per8.jpg",
+            "status": "closed",
+            "cardClass": "tech",
+            "substatus": "won"
+        },
+        {
+            "company": "LOST",
+            "project": "Startup Mentorship Pkg",
+            "valueLabel": "Missed Opportunity",
+            "value": "$5,000",
+            "img": "",
+            "status": "closed",
+            "cardClass": "lab",
+            "substatus": "lost"
+        },
+        {
+            "company": "ALPHATECH",
+            "project": "Website Redesign",
+            "valueLabel": "Value",
+            "value": "$18,000",
+            "img": "images/per1.jpg",
+            "status": "prospecting",
+            "cardClass": "tech"
+        },
+        {
+            "company": "NEXTGEN SOLUTIONS",
+            "project": "CRM Integration",
+            "valueLabel": "Value",
+            "value": "$27,500",
+            "img": "images/per2.jpg",
+            "status": "prospecting",
+            "cardClass": "lab"
+        },
+        {
+            "company": "DATABRIDGE",
+            "project": "Big Data Pipeline Setup",
+            "valueLabel": "Value",
+            "value": "$95,000",
+            "img": "images/per3.jpg",
+            "status": "qualification",
+            "cardClass": "qual-tech"
+        },
+        {
+            "company": "CYBERCORE",
+            "project": "Security Audit System",
+            "valueLabel": "Value",
+            "value": "$42,000",
+            "img": "images/per4.jpg",
+            "status": "qualification",
+            "cardClass": "qual-tech"
+        },
+        {
+            "company": "BLUESKY INC",
+            "project": "E-commerce Mobile App",
+            "valueLabel": "Value",
+            "value": "$68,000",
+            "img": "images/per5.jpg",
+            "status": "proposal",
+            "cardClass": "tech"
+        },
+        {
+            "company": "GLOBAL LOGISTICS",
+            "project": "AI Warehouse Automation",
+            "valueLabel": "Value",
+            "value": "$320,000",
+            "img": "images/per6.jpg",
+            "status": "proposal",
+            "cardClass": "lab",
+            "highValue": true
+        },
+        {
+            "company": "GREENTECH",
+            "project": "Energy Monitoring Dashboard",
+            "valueLabel": "Value",
+            "value": "$36,000",
+            "img": "images/per7.jpg",
+            "status": "negotiation",
+            "cardClass": "nego-tech"
+        },
+        {
+            "company": "RETAIL HUB",
+            "project": "POS System Upgrade",
+            "valueLabel": "Value",
+            "value": "$22,000",
+            "img": "images/per8.jpg",
+            "status": "negotiation",
+            "cardClass": "nego-tech"
+        },
+        {
+            "company": "WON",
+            "project": "Cloud Migration Package",
+            "valueLabel": "Final Value",
+            "value": "$120,000",
+            "img": "images/per2.jpg",
+            "status": "closed",
+            "cardClass": "tech",
+            "substatus": "won"
+        },
+        {
+            "company": "LOST",
+            "project": "Startup SaaS Platform",
+            "valueLabel": "Missed Opportunity",
+            "value": "$9,000",
+            "img": "",
+            "status": "closed",
+            "cardClass": "lab",
+            "substatus": "lost"
+        }
+    ]
+}

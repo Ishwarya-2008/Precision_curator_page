@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precision Curator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <section class="nav-bar">
+            <div class="header">
+                <div class="heading">Precision Curator</div>
+                <div class="sub-heading">
+                    <nav class="nav-links">
+                        <p>Dashboard</p>
+                        <p>Contacts</p>
+                        <p><a href="pipeline.html">Pipeline</a></p>
+                        <p>Analytics</p>
+                    </nav>
+                </div>
+            </div>
+            <div class="head-last">
+                <i class="fa-regular fa-bell"></i>
+                <i class="fa-solid fa-gear"></i>
+                <img src="images/profile.jpg" alt="Profile Picture" class="pro-img">
+            </div>
+        </section>
+        <section class="profile">
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="images/logo.jpg" alt="Logo Image" class="logo-pic">
+                </div>
+                <div class="logo-name">
+                    <h1 class="name">Alexandra Vane</h1>
+                    <div class="details">
+                        <p class="position">Chief Strategy Officer at Neotech Global</p>
+                        <button class="edit-btn">HIGH VALUE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="contact">
+                <div class="email"><i class="fa-regular fa-envelope"></i><p>Email</p></div>
+                <div class="note"><i class="fa-solid fa-plus"></i><p>New Note</p></div>
+            </div>
+        </section>
+        <section class="main-content">
+            <div class="left-content">
+                <div class="metadata">
+                    <p> CONTACT METADATA</p>
+                    <div>
+                        <p class="label">Email Address</p>
+                        <p class="value">alexandra.v@neotach.com</p>
+                    </div>
+                    <div>
+                        <p class="label">Phone Number</p>
+                        <p class="value">+1 (555) 012-9984</p>
+                    </div>
+                    <div>
+                        <p class="label">Location</p>
+                        <p class="value">San Francisco, CA</p>
+                    </div>
+                    <div>
+                        <p class="label">Timezone</p>
+                        <p class="value">PST (UTC-8)</p>
+                    </div>
+                    <div>
+                        <p class="label">Relationship Manager</p>
+                        <div class="rm-img">
+                            <img src="images/manager.jpg" alt="Relationship Manager" class="rm-pic">
+                            <p class="value">Marcus Chen</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social">
+                    <p>SOCIAL PRESENCE</p>
+                    <div class="icons">
+                        <div><i class="fa-solid fa-link"></i></div>
+                        <div><i class="fa-solid fa-earth-asia"></i></div>
+                        <div><i class="fa-solid fa-briefcase"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="right-top">
+                    <div class="right-top-top">
+                        <div class="deals">Associated Deals</div>
+                        <div class="pipeline"><a href="pipeline.html">View All Pipeline</a></div>
+                    </div>
+                    <div class="right-top-bottom">
+                        <div class="cloud">
+                            <div class="cloud-item">
+                                <div class="nego">NEGOTIATION</div>
+                                <div class="money">$1.2M</div>
+                            </div>
+                            <div class="cloud-item1">
+                                <p class="scale">Cloud Infrastructure Scale-up</p>
+                                <p class="date">Expected Close: Oct 24, 2024</p>
+                            </div>
+                        </div>
+                        <div class="global">
+                            <div class="global-item">
+                                <div class="discover">DISCOVERY</div>
+                                <div class="money">$450k</div>
+                            </div>
+                            <div class="global-item1">
+                                <p class="scale">Global Security Audit Phase II </p>
+                                <p class="date">Expected Close: Dec 12, 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-bottom">
+                    <div class="timeline-header">
+                        <h2 class="timeline-title">Communication Timeline</h2>
+                        <button class="sort-btn" id="sortBtn" title="Sort by Date">
+                            <i class="fa-solid fa-filter"></i>
+                        </button>
+                    </div>
+                    <div class="timeline-list" id="timelineList">
+                        <div class="timeline-entry" data-date="2024-10-22T14:45:00">
+                            <div class="entry-icon email-icon">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div class="entry-content">
+                                <div class="entry-top">
+                                    <h3 class="entry-title">Follow-up: é 4 Strategy Review</h3>
+                                    <span class="entry-date">Yesterday, 2:45 PM</span>
+                                </div>
+                                <p class="entry-desc">Alexandra expressed interest in expanding the scope of the infrastructure project to include the EMEA region. Need to draft a revised proposal by Friday.</p>
+                                <div class="entry-tags">
+                                    <span class="tag">Email Outbound</span>
+                                    <span class="tag">Project: CloudScale</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-entry" data-date="2024-10-18T10:15:00">
+                            <div class="entry-icon call-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="entry-content">
+                                <div class="entry-top">
+                                    <h3 class="entry-title">Inbound Discovery Call</h3>
+                                    <span class="entry-date">Oct 18, 10:15 AM</span>
+                                </div>
+                                <p class="entry-desc entry-quote">"We are looking for a partner who can manage the transition without downtime. Reliability is our #1 KPI."</p>
+                                <div class="entry-people">
+                                    <div class="people-avatars">
+                                        <img src="images/profile.jpg" alt="Alexandra" class="avatar">
+                                        <img src="images/manager.jpg" alt="Marcus" class="avatar avatar-overlap">
+                                    </div>
+                                    <span class="people-names">Alexandra & Marcus (14 mins)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-entry" data-date="2024-10-15T16:00:00">
+                            <div class="entry-icon note-icon">
+                                <i class="fa-regular fa-file-lines"></i>
+                            </div>
+                            <div class="entry-content">
+                                <div class="entry-top">
+                                    <h3 class="entry-title">Private Note: Budget Sensitivity</h3>
+                                    <span class="entry-date">Oct 15, 4:00 PM</span>
+                                </div>
+                                <p class="entry-desc">Budget approval is currently with the CFO. Alexandra is an advocate but we need to demonstrate clear ROI over 24 months to secure the signature.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="load-more-btn" id="loadMoreBtn">Load Older Activities</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

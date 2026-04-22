@@ -1,0 +1,873 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.left-sec {
+    width: 270px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+    background-color: rgba(234, 238, 242, 1);
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+}
+
+.precision {
+    color: rgba(0, 52, 102, 1);
+    font-size: 24px;
+    width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.title p {
+    color: rgba(66, 71, 80, 1);
+    font-size: 14px;
+    width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.lists {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.lists div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+}
+
+.lists div:hover {
+    background-color: rgba(0, 52, 102, 0.05);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+svg {
+    width: 25px;
+    height: 25px;
+    fill: rgba(66, 71, 80, 1);
+}
+
+.lists div p {
+    color: rgba(66, 71, 80, 1);
+    font-size: 20px;
+    width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+i {
+    color: rgba(66, 71, 80, 1);
+}
+
+.active {
+    background-color: #ffffff;
+}
+
+.active p {
+    color: rgba(0, 52, 102, 1) !important;
+}
+
+.active i {
+    color: rgba(0, 52, 102, 1) !important;
+}
+
+.rec-btn {
+    width: 170px;
+    height: 40px;
+    font-size: 18px;
+    color: white;
+    background: linear-gradient(#04386B, #184a81);
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.rec-btn p {
+    width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.rec-btn:hover {
+    background: linear-gradient(#184a81, #04386B);
+    cursor: pointer;
+}
+
+.help {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.help div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+    color: rgba(66, 71, 80, 1);
+}
+
+.help div p {
+    width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.help div:hover {
+    background-color: rgba(0, 52, 102, 0.05);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.right-sec {
+    width: calc(100% - 270px);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 270px;
+    background-color: #f6fafe;
+    font-family: "Manrope", sans-serif;
+}
+
+.right-bottom {
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.head {
+    width: calc(100% - 270px);
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: fixed;
+}
+
+.search {
+    width: 300px;
+    height: 40px;
+    font-size: 15px;
+    color: rgba(66, 71, 80, 1);
+    background-color: rgba(223, 227, 231, 1);
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 40%;
+    background-color: rgba(0, 52, 102, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile i:hover {
+    color: rgba(0, 52, 102, 1) !important;
+    cursor: pointer;
+}
+
+.pipeline {
+    flex: 1;
+    /* width: 100%;
+    height: calc(100% - 160px); */
+    padding: 40px;
+    margin-top: 70px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sales {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sales h3 {
+    font-size: 34px;
+    width: 240px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.activity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 19px;
+    color: rgba(66, 71, 80, 1);
+}
+
+.activity p {
+    width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.btns div:hover {
+    background-color: rgba(0, 52, 102, 0.05);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.filter-btn,
+.sort-btn {
+    width: 160px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    font-size: 17px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.icons {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.fa-solid.fa-sort-up,
+.fa-solid.fa-sort-down {
+    color: rgba(66, 71, 80, 1);
+    font-size: 17px;
+}
+
+.fa-solid.fa-sort-down {
+    position: absolute;
+    display: none;
+    top: -12px;
+}
+
+.fa-solid.fa-sort-up {
+    position: absolute;
+    display: block;
+    top: -6px;
+}
+
+.filter-btn p {
+    width: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sort-btn p {
+    width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.deals {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.pros-col,
+.qual-col,
+.pro-col,
+.nego-col,
+.close-col {
+    min-width: 250px;
+    flex: 1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.close-col {
+    opacity: 0.6;
+}
+
+.col-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.pros,
+.qual,
+.pro,
+.nego,
+.close {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 15px;
+    align-items: center;
+    color: rgba(115, 119, 129, 1);
+}
+
+.pros i {
+    color: rgba(115, 119, 129, 1);
+    font-size: 10px
+}
+
+.pro i {
+    color: rgba(183, 200, 225, 1);
+    font-size: 10px;
+}
+
+.qual i {
+    color: #184a81;
+    font-size: 10px;
+}
+
+.nego i {
+    color: rgba(0, 52, 102, 1);
+    font-size: 10px;
+}
+
+.close i {
+    color: rgba(104, 219, 169, 1);
+    font-size: 10px;
+}
+
+.num {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(234, 238, 242, 1);
+    border-radius: 50%;
+    text-align: center;
+    color: black;
+    padding: 5px;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: #f1f4f9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tech,
+.lab {
+    width: 250px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.qual-tech {
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 6px solid rgba(26, 75, 132, 1);
+}
+
+.nego-tech {
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 3px solid rgba(26, 75, 132, 1);
+}
+
+.core-btn {
+    background-color: rgba(234, 238, 242);
+    padding: 10px;
+    width: 100px;
+    font-size: 12px;
+    color: rgba(66, 71, 80, 1);
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.win-btn {
+    padding: 10px;
+    width: fit-content;
+    font-size: 12px;
+    color: rgb(87, 217, 159);
+    font-weight: 600;
+}
+
+.win-btn i {
+    color: rgb(87, 217, 159) !important;
+    margin-right: 5px;
+}
+
+.lose-btn {
+    padding: 10px;
+    width: fit-content;
+    font-size: 12px;
+    color: rgb(229, 62, 62);
+    font-weight: 600;
+}
+
+.lose-btn i {
+    color: rgb(229, 62, 62) !important;
+    margin-right: 5px;
+}
+
+.close-col .content .tech,
+.close-col .content .lab {
+    border-style: dashed;
+    border-width: 1.5px;
+    border-color: rgba(195, 198, 209, 1);
+}
+
+.cloud {
+    width: 210px;
+    color: rgba(23, 28, 31, 1);
+    font-size: 18px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.value {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px;
+    font-size: 18px;
+    color: rgba(66, 71, 80, 1);
+    line-height: 30px;
+    align-items: end;
+}
+
+.value p {
+    width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.amount {
+    font-size: 25px;
+    color: #04386B;
+    font-weight: 700;
+    font-family: "Manrope", sans-serif;
+}
+
+.per2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 40%;
+}
+
+.high {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    background-color: rgba(133, 248, 196, 1);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.pro-col .content .lab {
+    position: relative;
+}
+
+.health {
+    width: calc(100% - 270px);
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px;
+    position: fixed;
+}
+
+.health div {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.outer {
+    width: 100%;
+    background-color: #eaeef2;
+    height: 5px;
+}
+
+.inner {
+    background-color: #1a4b84;
+    width: 65% !important;
+    height: 5px;
+}
+
+.health div p {
+    width: 230px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: rgba(66, 71, 80, 1);
+}
+
+.health div h2 {
+    width: 230px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.health div span {
+    font-size: 30px;
+    color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 700;
+}
+
+.col {
+    flex: 1;
+}
+
+.forecast span {
+    font-size: 30px;
+    color: #04386B !important;
+    font-weight: 700;
+    font-family: "Manrope", sans-serif;
+}
+
+.forecast p {
+    font-family: "Inter", sans-serif;
+}
+
+.revenue,
+.revenue i {
+    color: rgba(104, 219, 169, 1) !important;
+}
+
+.optional {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 52, 102, 1);
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+}
+
+.text {
+    width: 60%;
+}
+
+.text-logo {
+    width: 30%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.text-logo i {
+    color: rgba(255, 255, 255, 0.5) !important;
+    font-size: 25px;
+}
+
+.text p {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 12px !important;
+}
+
+.no-results {
+    text-align: center;
+    color: rgba(115, 119, 129, 1);
+    font-size: 14px;
+    padding: 20px 10px;
+    font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+    .left-sec {
+        width: 220px;
+    }
+
+    .right-sec {
+        width: calc(100% - 220px);
+        margin-left: 220px;
+    }
+
+    .deals {
+        flex-wrap: wrap;
+    }
+
+    .tech,
+    .lab,
+    .qual-tech,
+    .nego-tech {
+        width: 180px;
+    }
+
+    .filter-btn,
+    .sort-btn {
+        width: 130px;
+        font-size: 14px;
+    }
+
+    .sales h3 {
+        font-size: 28px;
+    }
+
+    .activity {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .left-sec {
+        width: 0;
+        padding: 0;
+        overflow: hidden;
+        position: fixed;
+        z-index: 100;
+    }
+
+    .right-sec {
+        width: 100%;
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .head {
+        padding: 10px;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .deals {
+        flex-direction: column;
+        overflow-x: auto;
+    }
+
+    .pros-col,
+    .qual-col,
+    .pro-col,
+    .nego-col,
+    .close-col {
+        width: 100%;
+    }
+
+    .tech,
+    .lab,
+    .qual-tech,
+    .nego-tech {
+        width: 100%;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .sales h3 {
+        font-size: 24px;
+    }
+
+    .btns {
+        flex-wrap: wrap;
+    }
+
+    .filter-btn,
+    .sort-btn {
+        width: auto;
+        padding: 8px 15px;
+    }
+
+    .profile {
+        gap: 15px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .right-sec {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .sales h3 {
+        font-size: 20px;
+    }
+
+    .activity {
+        font-size: 15px;
+    }
+
+    .cloud {
+        font-size: 18px;
+    }
+
+    .value {
+        font-size: 15px;
+    }
+
+    span {
+        font-size: 20px;
+    }
+
+    .pipeline {
+        padding: 10px;
+    }
+}
