@@ -67,6 +67,10 @@ let dummyData = [
 let loadCount = 0;
 
 loadMoreBtn.addEventListener('click', () => {
+    loadMoreBtn.disabled = true;
+    loadMoreBtn.innerHTML = '<span class="loader"></span> Loading...';
+
+    setTimeout(() => {
     for (let i = 0; i < 5; i++) {
         let data = dummyData[(i)];
         let entry = document.createElement('div');
@@ -108,4 +112,7 @@ loadMoreBtn.addEventListener('click', () => {
     }
 
     loadCount++;
+    loadMoreBtn.disabled = false;
+    loadMoreBtn.innerHTML = 'Load More';
+    }, 1000);
 });
