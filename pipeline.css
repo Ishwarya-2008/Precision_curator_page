@@ -120,6 +120,7 @@ i {
 
 .active {
     background-color: #ffffff;
+    border-radius: 8px;
 }
 
 .active p {
@@ -328,7 +329,6 @@ input {
     cursor: pointer;
 }
 
-.filter-btn,
 .sort-btn {
     width: 160px;
     padding: 10px;
@@ -340,7 +340,8 @@ input {
     gap: 10px;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;
+    border-radius: 8px;
+
 }
 
 .icons {
@@ -390,8 +391,11 @@ input {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    overflow-x: auto;
+    overflow-y: auto;
     padding-bottom: 10px;
+    overflow-x: hidden;
+    justify-content: center;
+    overflow-x: hidden;
 }
 
 .pros-col,
@@ -399,7 +403,6 @@ input {
 .pro-col,
 .nego-col,
 .close-col {
-    min-width: 250px;
     flex: 1;
     flex-shrink: 0;
     display: flex;
@@ -472,7 +475,7 @@ input {
     height: 100%;
     border-radius: 15px;
     background-color: #f1f4f9;
-    padding: 20px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -480,7 +483,7 @@ input {
 
 .tech,
 .lab {
-    width: 250px;
+    width: 100%;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -558,7 +561,7 @@ input {
 }
 
 .cloud {
-    width: 210px;
+    width: 200px;
     color: rgba(23, 28, 31, 1);
     font-size: 18px;
     font-weight: 600;
@@ -576,6 +579,7 @@ input {
     color: rgba(66, 71, 80, 1);
     line-height: 30px;
     align-items: end;
+    justify-content: space-between;
 }
 
 .value p {

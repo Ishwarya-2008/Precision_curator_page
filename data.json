@@ -22,13 +22,6 @@
             "dotClass": "pro"
         },
         {
-            "id": "negotiation",
-            "label": "NEGOTIATION",
-            "count": 2,
-            "colClass": "nego-col",
-            "dotClass": "nego"
-        },
-        {
             "id": "closed",
             "label": "CLOSED",
             "count": 10,
@@ -82,15 +75,6 @@
             "status": "proposal",
             "cardClass": "lab",
             "highValue": true
-        },
-        {
-            "company": "AETHERIA",
-            "project": "Sustainability Consulting",
-            "valueLabel": "Value",
-            "value": "$28,500",
-            "img": "images/per7.jpg",
-            "status": "negotiation",
-            "cardClass": "nego-tech"
         },
         {
             "company": "WON",
@@ -166,24 +150,6 @@
             "status": "proposal",
             "cardClass": "lab",
             "highValue": true
-        },
-        {
-            "company": "GREENTECH",
-            "project": "Energy Monitoring Dashboard",
-            "valueLabel": "Value",
-            "value": "$36,000",
-            "img": "images/per7.jpg",
-            "status": "negotiation",
-            "cardClass": "nego-tech"
-        },
-        {
-            "company": "RETAIL HUB",
-            "project": "POS System Upgrade",
-            "valueLabel": "Value",
-            "value": "$22,000",
-            "img": "images/per8.jpg",
-            "status": "negotiation",
-            "cardClass": "nego-tech"
         },
         {
             "company": "WON",
