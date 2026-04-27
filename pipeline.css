@@ -873,3 +873,18 @@ input {
         padding: 10px;
     }
 }
+
+@media (min-width: 1024px) and (max-width: 1530px) {
+    .left-sec {
+        width: 220px;
+    }
+
+    .right-sec {
+        width: calc(100% - 220px);
+        margin-left: 220px;
+    }
+
+    .deals{
+        overflow-x: auto;
+    }
+}
