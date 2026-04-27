@@ -275,7 +275,6 @@ nav {
 }
 
 .value {
-    width: 240px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -737,6 +736,7 @@ a {
     .nav-bar {
         flex-direction: column;
         gap: 15px;
+        align-items: center;
     }
 
     .header {
@@ -770,12 +770,24 @@ a {
     .profile {
         flex-direction: column;
         height: auto;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .contact {
         padding: 20px;
         flex-wrap: wrap;
+    }
+
+    .social{
+        align-items: center;
+    }
+
+    .entry-content{
+        width: 100%;
+    }
+
+    .entry-desc{
+        width: 100%;
     }
 }
 
