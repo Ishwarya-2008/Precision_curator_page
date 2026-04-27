@@ -969,4 +969,8 @@ a {
     .global {
         width: 100%;
     }
+
+    .social{
+        align-items: center;
+    }
 }
