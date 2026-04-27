@@ -753,13 +753,6 @@ input {
         flex-wrap: wrap;
     }
 
-    .tech,
-    .lab,
-    .qual-tech,
-    .nego-tech {
-        width: 180px;
-    }
-
     .filter-btn,
     .sort-btn {
         width: 130px;
@@ -773,6 +766,42 @@ input {
     .activity {
         flex-direction: column;
         gap: 10px;
+    }
+
+    .health {
+        width: calc(100% - 220px);
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .health div {
+        width: 275px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .health .inner {
+        width: 65% !important;
+        height: 20px;
+    }
+
+    .health .outer {
+        width: 85%;
+        height: 3.5px;
+        align-items: flex-start;
+    }
+
+    .right .health {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        height: auto;
+    }
+
+    .health div{
+        width: 100%;
+        height: auto;
+        align-items: center;
     }
 }
 
@@ -884,7 +913,7 @@ input {
         margin-left: 220px;
     }
 
-    .deals{
+    .deals {
         overflow-x: auto;
     }
 }
