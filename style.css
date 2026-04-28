@@ -607,7 +607,8 @@ a {
 }
 
 .entry-title {
-    width: 350px;
+    flex: 1;
+    min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -618,7 +619,7 @@ a {
 
 .entry-date {
     font-size: 14px;
-    width: 200px;
+    flex-shrink: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     color: rgba(66, 71, 80, 1);
@@ -626,7 +627,6 @@ a {
 }
 
 .entry-desc {
-    width: 780px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -648,7 +648,7 @@ a {
 }
 
 .tag {
-    width: 150px;
+    max-width: 150px;
     font-size: 12px;
     padding: 5px 14px;
     background-color: #e8edf2;
@@ -785,9 +785,7 @@ a {
         width: 100%;
     }
 
-    .entry-desc{
-        width: 100%;
-    }
+
 }
 
 @media (max-width: 768px) {

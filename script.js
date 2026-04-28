@@ -13,6 +13,9 @@ sortBtn.addEventListener('click', () => {
     });
     entries.forEach(entry => timelineList.appendChild(entry));
     sortAsc = !sortAsc;
+
+    let icon = sortBtn.querySelector('i');
+    icon.className = sortAsc ? 'fa-solid fa-arrow-up-short-wide' : 'fa-solid fa-arrow-down-wide-short';
 });
 
 let dummyData = [
