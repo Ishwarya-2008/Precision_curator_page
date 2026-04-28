@@ -807,10 +807,7 @@ input {
 
 @media (max-width: 768px) {
     .left-sec {
-        width: 0;
-        padding: 0;
         overflow: hidden;
-        position: fixed;
         z-index: 100;
     }
 
