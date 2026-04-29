@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="footer">
-                <div class="rec-btn">
+                <div class="rec-btn" id="new-record-btn">
                     <p>New Record</p>
                 </div>
                 <div class="help">
@@ -119,6 +119,37 @@
             </div>
         </section>
     </div>
+    <div class="popup-overlay" id="record-popup">
+        <div class="popup-box">
+            <div class="popup-header">
+                <h3>Add New Record</h3>
+                <span class="popup-close" id="close-record-popup">&times;</span>
+            </div>
+            <div class="popup-body">
+                <label>Category</label>
+                <select id="record-category">
+                    <option value="prospecting">Prospecting</option>
+                    <option value="qualification">Qualification</option>
+                    <option value="proposal">Proposal</option>
+                    <option value="closed">Closed</option>
+                </select>
+                <label>Company Name</label>
+                <input type="text" id="record-company" placeholder="Enter company name">
+                <label>Project Name</label>
+                <input type="text" id="record-project" placeholder="Enter project name">
+                <label>Value ($)</label>
+                <input type="text" id="record-value" placeholder="e.g. 45000">
+                <label>Substatus (for Closed only)</label>
+                <select id="record-substatus">
+                    <option value="">None</option>
+                    <option value="won">Won</option>
+                    <option value="lost">Lost</option>
+                </select>
+                <button class="popup-submit" id="submit-record">Add Record</button>
+            </div>
+        </div>
+    </div>
+
     <script src="pipeline.js"></script>
 </body>
 

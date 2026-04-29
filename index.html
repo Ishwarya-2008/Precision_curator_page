@@ -47,7 +47,7 @@
             </div>
             <div class="contact">
                 <div class="email"><i class="fa-regular fa-envelope"></i><p>Email</p></div>
-                <div class="note"><i class="fa-solid fa-plus"></i><p>New Note</p></div>
+                <div class="note" id="new-note-btn"><i class="fa-solid fa-plus"></i><p>New Note</p></div>
             </div>
         </section>
         <section class="main-content">
@@ -177,6 +177,30 @@
             </div>
         </section>
     </div>
+    <div class="popup-overlay" id="note-popup">
+        <div class="popup-box">
+            <div class="popup-header">
+                <h3>Add New Note</h3>
+                <span class="popup-close" id="close-note-popup">&times;</span>
+            </div>
+            <div class="popup-body">
+                <label>Title</label>
+                <input type="text" id="note-title" placeholder="Enter note title">
+                <label>Type</label>
+                <select id="note-type">
+                    <option value="note">Private Note</option>
+                    <option value="email">Email</option>
+                    <option value="call">Call</option>
+                </select>
+                <label>Description</label>
+                <textarea id="note-description" placeholder="Enter note details..." rows="4"></textarea>
+                <label>Tags (comma separated)</label>
+                <input type="text" id="note-tags" placeholder="e.g. Email Outbound, Project: CloudScale">
+                <button class="popup-submit" id="submit-note">Add Note</button>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 

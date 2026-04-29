@@ -120,3 +120,65 @@ loadMoreBtn.addEventListener('click', () => {
     loadMoreBtn.scrollIntoView({ behavior: 'smooth', block: 'end' });
     }, 1000);
 });
+
+document.getElementById('new-note-btn').addEventListener('click', () => {
+    document.getElementById('note-popup').classList.add('active');
+});
+
+document.getElementById('close-note-popup').addEventListener('click', () => {
+    document.getElementById('note-popup').classList.remove('active');
+});
+
+document.getElementById('note-popup').addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) e.currentTarget.classList.remove('active');
+});
+
+document.getElementById('submit-note').addEventListener('click', () => {
+    const title = document.getElementById('note-title').value.trim();
+    const type = document.getElementById('note-type').value;
+    const description = document.getElementById('note-description').value.trim();
+    const tagsRaw = document.getElementById('note-tags').value.trim();
+
+    if (!title || !description) {
+        alert('Please fill in title and description.');
+        return;
+    }
+
+    const now = new Date();
+    const dateStr = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) + ', ' +
+                    now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+    const isoDate = now.toISOString();
+
+    const iconMap = { note: 'fa-regular fa-file-lines', email: 'fa-regular fa-envelope', call: 'fa-solid fa-phone' };
+    const iconClassMap = { note: 'note-icon', email: 'email-icon', call: 'call-icon' };
+
+    let tagsHTML = '';
+    if (tagsRaw) {
+        const tags = tagsRaw.split(',').map(t => t.trim()).filter(t => t);
+        tagsHTML = `<div class="entry-tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>`;
+    }
+
+    const entry = document.createElement('div');
+    entry.classList.add('timeline-entry');
+    entry.setAttribute('data-date', isoDate);
+    entry.innerHTML = `
+        <div class="entry-icon ${iconClassMap[type]}">
+            <i class="${iconMap[type]}"></i>
+        </div>
+        <div class="entry-content">
+            <div class="entry-top">
+                <h3 class="entry-title">${title}</h3>
+                <span class="entry-date">${dateStr}</span>
+            </div>
+            <p class="entry-desc">${description}</p>
+            ${tagsHTML}
+        </div>`;
+
+    timelineList.prepend(entry);
+
+    document.getElementById('note-title').value = '';
+    document.getElementById('note-description').value = '';
+    document.getElementById('note-tags').value = '';
+    document.getElementById('note-type').value = 'note';
+    document.getElementById('note-popup').classList.remove('active');
+});

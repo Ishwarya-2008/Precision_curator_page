@@ -95,7 +95,7 @@ fetch("data.json")
 let sortAsc = true;
 document.getElementById('sort-btn').addEventListener('click', () => {
     const columns = document.querySelectorAll('.deals > div');
-    if(sortAsc){
+    if (sortAsc) {
         document.querySelector('.fa-sort-up').style.display = 'none';
         document.querySelector('.fa-sort-down').style.display = 'block';
     } else {
@@ -113,4 +113,85 @@ document.getElementById('sort-btn').addEventListener('click', () => {
         cards.forEach(card => content.appendChild(card));
     });
     sortAsc = !sortAsc;
+});
+
+document.getElementById('new-record-btn').addEventListener('click', () => {
+    document.getElementById('record-popup').classList.add('active');
+});
+
+document.getElementById('close-record-popup').addEventListener('click', () => {
+    document.getElementById('record-popup').classList.remove('active');
+});
+
+document.getElementById('record-popup').addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) {
+        e.currentTarget.classList.remove('active');
+    }
+});
+
+document.getElementById('submit-record').addEventListener('click', () => {
+    const category = document.getElementById('record-category').value;
+    const company = document.getElementById('record-company').value.trim();
+    const project = document.getElementById('record-project').value.trim();
+    const rawValue = document.getElementById('record-value').value.trim();
+    const substatus = document.getElementById('record-substatus').value;
+
+    if (!company || !project || !rawValue) {
+        alert('Please fill in all required fields.');
+        return;
+    }
+
+    const numericValue = parseInt(rawValue.replace(/[^0-9]/g, ''), 10);
+    if (isNaN(numericValue)) {
+        alert('Please enter a valid numeric value.');
+        return;
+    }
+    const formattedValue = '$' + numericValue.toLocaleString();
+
+    const cardClassMap = {
+        prospecting: 'tech',
+        qualification: 'qual-tech',
+        proposal: 'tech',
+        closed: 'tech'
+    };
+    
+    const valueLabelMap = {
+        prospecting: 'Value',
+        qualification: 'Value',
+        proposal: 'Value',
+        closed: substatus === 'won' ? 'Final Value' : substatus === 'lost' ? 'Missed Opportunity' : 'Value'
+    };
+
+    const item = {
+        company: company.toUpperCase(),
+        project: project,
+        valueLabel: valueLabelMap[category],
+        value: formattedValue,
+        img: '',
+        status: category,
+        cardClass: cardClassMap[category],
+        substatus: substatus || undefined,
+        highValue: numericValue >= 200000
+    };
+
+    const stageColMap = {
+        prospecting: '.pros-col',
+        qualification: '.qual-col',
+        proposal: '.pro-col',
+        closed: '.close-col'
+    };
+
+    const col = document.querySelector(stageColMap[category]);
+    if (col) {
+        const content = col.querySelector('.content');
+        content.insertAdjacentHTML('beforeend', buildCard(item));
+        const numBadge = col.querySelector('.num');
+        if (numBadge) numBadge.textContent = parseInt(numBadge.textContent) + 1;
+    }
+
+    document.getElementById('record-company').value = '';
+    document.getElementById('record-project').value = '';
+    document.getElementById('record-value').value = '';
+    document.getElementById('record-substatus').value = '';
+    document.getElementById('record-popup').classList.remove('active');
 });
